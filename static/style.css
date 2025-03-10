@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Bagnard';
+    src: url('fonts/Bagnard.woff2') format('woff2'),
+        url('fonts/Bagnard.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+    font-optical-sizing: auto;
+}
+
+* {
+    font-family: Bagnard;
+    padding: 5px;
+    margin: 5px;
+}
+
+#webname {
+    background-color: #ffdcaa;
+}
+
+a {
+    text-decoration: none;
+    color: #002649;
+    margin-right: 15px;
+}
+
+th {
+    padding: 12px;
+    background-color: #FFAD39;
+    width: fit-content;
+    color: #002649;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFDCAA;
+}
+
+form * {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #FFAD39;
+    border: none;
+    border-radius: 10px;
+}
