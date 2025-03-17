@@ -46,3 +46,8 @@ input[type="submit"] {
     border: none;
     border-radius: 10px;
 }
+
+ul {
+    display: none;
+}
+

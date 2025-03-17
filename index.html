@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="./static/script.js" defer></script>
     <link rel="stylesheet" href="static/style.css">
     <meta charset="UTF-8">
@@ -10,7 +11,7 @@
     <meta name="description" content="Benjamin Najib professional website">
     <title>Benjamin Najib</title>
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname"> Benjamin Najib </h1>
         <nav>
@@ -24,11 +25,17 @@
         <main>
             <h2 id="greeting"> Hi, my name is Benjamin </h2>
             <img src="static/oe.png" alt="Holland orange">
-            <p id="intro"> I am interested in software engineering and mathematics. </p>
+            <p id="intro"> I am interested in software engineering and mathematics.</p>
+            <div class="classA">
+                <span id="shortIntro">Lorem ipsum</span>
+                <span id="readMore">Read More</span>
+                <span id="longIntro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                <span id="readLess">Read Less</span>
+            </div>
         </main>
     </div>
     <footer>
-        © 2025 designed 🎨 and coded 🧑🏽‍💻 by Benjamin Najib
+        <p id="copyYear"></p>
     </footer>
 </body>
 </html>

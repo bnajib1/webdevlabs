@@ -10,7 +10,7 @@
     <meta name="description" content="Benjamin Najib professional website">
     <title>Benjamin Najib</title>
 </head>
-<body style="font-family: Arial;">
+<body onload="addYear()">
     <header>
         <h1 id="webname"> Benjamin Najib </h1>
         <nav>
@@ -23,7 +23,8 @@
     <div>
         <main>
             <h2> Things I love to do for fun </h2>
-            <ul>
+            <button id="but" onclick="showList()">Click to see...</button>
+            <ul id="lis">
                 <li> Reading philosophy books. </li>
                 <li> Listening to a variety of music. </li>
                 <li> Watching classic movies. </li>
@@ -33,7 +34,7 @@
         </main>
     </div>
     <footer>
-        © 2025 designed 🎨 and coded 🧑🏽‍💻 by Benjamin Najib
+        <p id="copyYear"></p>
     </footer>
 </body>
 </html>

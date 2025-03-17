@@ -26,8 +26,8 @@ function findTheBanana(L) {
         }
     });
 }
-findTheBanana(L1);
-findTheBanana(L2);
+// findTheBanana(L1);
+// findTheBanana(L2);
 function greetingFunc() {
     const d = new Date();
     const h = d.getHours();
@@ -43,3 +43,41 @@ function greetingFunc() {
     }
 }
 greetingFunc();
+function addYear() {
+    const d = new Date();
+    const y = d.getFullYear();
+    document.getElementById("copyYear").textContent = "© " + y + " designed 🎨 and coded 🧑🏽‍💻 by Benjamin Najib";
+}
+addYear();
+function showList() {
+    document.getElementById("lis").style.display = "block";
+    document.getElementById("but").style.display = "none";
+}
+
+$(function() {
+    $("#longIntro").hide()
+    $("#readLess").hide();
+});
+
+$("#readMore").click(function(){
+    $("#longIntro").show();
+    $("#readLess").show();
+    $("#readMore").hide();
+});
+
+$("#readLess").click(function(){
+    $("#readMore").show();
+    $("#longIntro").hide();
+    $("#readLess").hide();
+});
+
+
+function validate() {
+    var userName = document.getElementById("name");
+    var userEmail = document.getElementById("email");
+    var userText = document.getElementById("comment");
+    var msg = document.getElementById("validatemsg");
+    if (!userName.checkValidity() ||!userEmail.checkValidity() ||!userText.checkValidity()) {
+        msg.innerHTML = "Please fill out the form correctly so I can get back to you"
+    }
+}
