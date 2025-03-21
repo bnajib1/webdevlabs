@@ -20,10 +20,10 @@
             <a href="fun.html">fun</a>
         </nav>
     </header>
-    <div>
-        <main>
+    <div class="mainLayout">
+        <div class="item1">
             <h2> Things I love to do for fun </h2>
-            <button id="but" onclick="showList()">Click to see...</button>
+            <!--- <button id="but" onclick="showList()">Click to see...</button> --->
             <ul id="lis">
                 <li> Reading philosophy books. </li>
                 <li> Listening to a variety of music. </li>
@@ -31,7 +31,20 @@
                 <li> Hanging out with friends. </li>
                 <li> Traveling around the world. </li>
             </ul>
-        </main>
+        </div>
+        <div class="item2">
+            <img class="funIMG" src="../static/parisbalcony.jpeg">
+        </div>
+        <div class="item3">
+            <iframe width="560" height="335" src="https://www.youtube.com/embed/jfKfPfyJRdk?si=eZ-Tcx7QRiuopvWr&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="item4">
+            <div class="container">
+                <h2>Need Some Advice?</h2>
+                <p id="adviceText">Click the button to get a random piece of advice!</p>
+                <button onclick="getAdvice()">Get Advice</button>
+            </div>
+        </div>
     </div>
     <footer>
         <p id="copyYear"></p>

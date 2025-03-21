@@ -29,6 +29,9 @@ function findTheBanana(L) {
 // findTheBanana(L1);
 // findTheBanana(L2);
 function greetingFunc() {
+    if (!window.location.pathname.endsWith('/index.html')) {
+        return;
+    }
     const d = new Date();
     const h = d.getHours();
     const E = document.getElementById("greeting");
@@ -48,29 +51,30 @@ function addYear() {
     const y = d.getFullYear();
     document.getElementById("copyYear").textContent = "© " + y + " designed 🎨 and coded 🧑🏽‍💻 by Benjamin Najib";
 }
+
 addYear();
-function showList() {
-    document.getElementById("lis").style.display = "block";
-    document.getElementById("but").style.display = "none";
+// function showList() {
+//     document.getElementById("lis").style.display = "block";
+//     document.getElementById("but").style.display = "none";
+// }
+if (window.location.pathname.endsWith('/index.html')) {
+    $(function() {
+        $("#longIntro").hide()
+        $("#readLess").hide();
+    });
+    
+    $("#readMore").click(function(){
+        $("#longIntro").show();
+        $("#readLess").show();
+        $("#readMore").hide();
+    });
+    
+    $("#readLess").click(function(){
+        $("#readMore").show();
+        $("#longIntro").hide();
+        $("#readLess").hide();
+    });
 }
-
-$(function() {
-    $("#longIntro").hide()
-    $("#readLess").hide();
-});
-
-$("#readMore").click(function(){
-    $("#longIntro").show();
-    $("#readLess").show();
-    $("#readMore").hide();
-});
-
-$("#readLess").click(function(){
-    $("#readMore").show();
-    $("#longIntro").hide();
-    $("#readLess").hide();
-});
-
 
 function validate() {
     var userName = document.getElementById("name");
@@ -80,4 +84,16 @@ function validate() {
     if (!userName.checkValidity() ||!userEmail.checkValidity() ||!userText.checkValidity()) {
         msg.innerHTML = "Please fill out the form correctly so I can get back to you"
     }
+}
+
+function getAdvice() {
+    fetch('https://api.adviceslip.com/advice')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("adviceText").innerText = data.slip.advice;
+        })
+        .catch(error => {
+            document.getElementById("adviceText").innerText = "Failed to fetch advice.";
+            console.error('Fetch error:', error);
+        });
 }
